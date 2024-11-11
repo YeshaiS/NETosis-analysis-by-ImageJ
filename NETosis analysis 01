@@ -1,0 +1,37 @@
+Total # of events (Hoechst 33342)
+
+run("8-bit");
+setAutoThreshold("Default dark no-reset");
+//run("Threshold...");
+setThreshold(38, 255, "raw");
+//setThreshold(30, 255);
+setOption("BlackBackground", true);
+run("Convert to Mask");
+run("Analyze Particles...", "size=0.0001-Infinity circularity=0.3-1.00 show=[Overlay Masks] display exclude clear include summarize overlay");
+run("Clear Results");
+
+
+Total # of NETotic events (Sytox Green):
+
+run("8-bit");
+setAutoThreshold("Default dark no-reset");
+//run("Threshold...");
+setThreshold(38, 255, "raw");
+//setThreshold(30, 255);
+setOption("BlackBackground", true);
+run("Convert to Mask");
+run("Analyze Particles...", "size=0.0005-0.015 circularity=0.4-1 show=[Overlay Masks] display exclude clear include summarize overlay");
+run("Clear Results");
+
+
+Total # of NETosis events (Sytox Green):
+
+run("8-bit");
+setAutoThreshold("Default dark no-reset");
+//run("Threshold...");
+setThreshold(38, 255, "raw");
+//setThreshold(30, 255);
+setOption("BlackBackground", true);
+run("Convert to Mask");
+run("Analyze Particles...", "size=0.0005-Infinity circularity=0.0-0.5 show=[Overlay Masks] display exclude clear include summarize overlay");
+run("Clear Results");
